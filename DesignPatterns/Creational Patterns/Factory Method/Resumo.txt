@@ -1,0 +1,34 @@
+O que é o Factory Method?
+    - O Factory Method é como um "fábrica" para criar objetos em um programa de computador. Em vez de criar os objetos diretamente,
+    você pede para a "fábrica" criar para você. Assim, você não precisa se preocupar com os detalhes de como os objetos são feitos.
+
+Quando usar o Factory Method? Você deve usar o Factory Method quando:
+ - Não sabe exatamente qual objeto precisa: Se você não sabe de antemão qual tipo específico de objeto precisará criar.
+ - A criação é complicada: Quando criar um objeto envolve muitos passos ou é complexo.
+ - Quer flexibilidade: Se você quer mudar facilmente o tipo de objeto que está criando sem alterar muito o código.
+
+Prós
+ - Flexibilidade: Permite mudar facilmente o tipo de objeto criado sem mexer muito no resto do código.
+ - Organização: Deixa o código mais organizado, pois separa a criação do objeto do seu uso.
+ - Redução de dependências: O código que usa os objetos não precisa saber como eles são criados.
+
+Contras
+ - Complexidade inicial: Pode parecer um pouco mais complicado no início, especialmente para projetos pequenos.
+ - Mais classes e código: Pode aumentar o número de classes e linhas de código, o que pode ser excessivo para problemas simples.
+
+Exemplos Simples (Sem Código)
+ - Exemplo 1: Fábrica de Brinquedos
+    - Imagine que você tem uma fábrica que faz diferentes tipos de brinquedos, como bonecas e carrinhos. Em vez de você mesmo fazer cada brinquedo,
+    você diz para a fábrica: "Quero um brinquedo". A fábrica decide qual brinquedo fazer e te entrega. Assim, 
+    se você quiser mudar o tipo de brinquedo no futuro, só precisa mudar a fábrica, e não todo o seu processo de pedir brinquedos.
+
+ - Exemplo 2: Pedido de Comida
+    - Pense em um restaurante onde você faz um pedido. Você não se preocupa com como a comida é feita, só faz o pedido. 
+    O chef (que é a "fábrica") sabe como preparar diferentes tipos de comida. Se você quiser mudar o pedido de pizza para hambúrguer,
+    você só muda o pedido, e o chef cuida do resto.
+
+Conclusão: 
+    O Factory Method é uma técnica que ajuda a criar objetos de forma flexível e organizada.
+    Ele é útil quando você quer separar a criação dos objetos do seu uso, especialmente quando a criação é complicada ou você precisa de flexibilidade
+    para mudar o tipo de objeto criado no futuro. Ele traz benefícios de organização e flexibilidade, mas pode adicionar um pouco de complexidade
+    inicial ao seu código.
