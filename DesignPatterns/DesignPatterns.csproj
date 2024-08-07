@@ -7,4 +7,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Creational Patterns\NovaPasta\**" />
+    <EmbeddedResource Remove="Creational Patterns\NovaPasta\**" />
+    <None Remove="Creational Patterns\NovaPasta\**" />
+  </ItemGroup>
+
 </Project>

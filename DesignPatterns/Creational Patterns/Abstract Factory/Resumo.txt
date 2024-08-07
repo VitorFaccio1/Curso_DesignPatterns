@@ -1,0 +1,36 @@
+O que é o Abstract Factory?
+	Imagine que você vai decorar sua casa nova. Você quer comprar móveis, como sofás, mesas e cadeiras. 
+	Agora, pense que você quer que todos esses móveis sigam um certo estilo, como moderno ou vintage. 
+	Então, em vez de ir a várias lojas e tentar combinar os móveis por conta própria, você vai a uma loja especializada que 
+	já vende conjuntos completos de móveis em estilos específicos.
+
+O Abstract Factory é como essa loja especializada. Ele é um padrão de design que fornece uma interface para criar famílias de objetos 
+relacionados ou dependentes, sem especificar suas classes concretas. Basicamente, ele ajuda a criar grupos de objetos 
+(móveis) de uma vez só, garantindo que todos sejam compatíveis entre si.
+
+Prós e Contras
+	Prós
+		Consistência: Garante que os objetos criados sejam compatíveis entre si.
+		Flexibilidade: Facilita a troca de famílias de objetos (por exemplo, mudar de móveis modernos para vintage) sem precisar alterar o 
+		código que usa esses objetos.
+		Manutenção: Facilita a manutenção e expansão do código, pois a criação de objetos é centralizada.
+	Contras
+		Complexidade: Pode adicionar complexidade ao código, especialmente se você não precisar realmente de diferentes famílias de objetos.
+		Sobrecarga Inicial: Pode ser um exagero para projetos pequenos, onde uma fábrica simples ou a criação direta dos objetos pode ser mais adequada.
+
+Quando Usar?
+	Você precisa garantir que diferentes objetos funcionem bem juntos.
+	Você deseja criar famílias de objetos relacionados.
+	O sistema deve ser independente de como seus objetos são criados, compostos e representados.
+
+Exemplos
+	Fábrica de Móveis Modernos: Esta fábrica sabe como criar todos os tipos de móveis modernos: sofás modernos, mesas modernas, cadeiras modernas.
+	Fábrica de Móveis Vintage: Esta fábrica sabe como criar todos os tipos de móveis vintage: sofás vintage, mesas vintage, cadeiras vintage.
+
+	Se você usar a Fábrica de Móveis Modernos, ela criará todos os móveis no estilo moderno, e você terá certeza de que todos combinam. 
+	Se você mudar para a Fábrica de Móveis Vintage, todos os móveis serão no estilo vintage, e novamente, tudo combinará.
+
+Resumo
+	O Abstract Factory é uma maneira de garantir que você pode criar conjuntos de objetos que funcionam bem juntos sem se preocupar 
+	com os detalhes de como eles são criados. Ele é ótimo para projetos grandes e complexos onde a consistência e a flexibilidade 
+	são importantes, mas pode ser exagerado para projetos menores.
