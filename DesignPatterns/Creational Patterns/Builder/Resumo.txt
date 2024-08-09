@@ -1,0 +1,27 @@
+O que é o Builder?
+	O Builder é um padrão que facilita a criação de objetos complexos, separando o processo de construção em etapas distintas. 
+	Isso ajuda a evitar a criação de construtores (métodos que iniciam objetos) complicados e confusos, que precisam de muitos parâmetros.
+
+Prós:
+	1. Flexibilidade: Você pode construir diferentes versões de um objeto sem precisar criar novas classes.
+	2. Organização: O código fica mais limpo e organizado, com cada parte do objeto sendo configurada separadamente.
+	3. Reutilização: O mesmo processo de construção pode ser reutilizado para criar objetos semelhantes, com pequenas variações.
+
+Contras:
+	1. Complexidade: Pode aumentar a complexidade do código, pois exige a criação de várias classes e métodos adicionais.
+	2. Excesso de código: Em casos simples, o Builder pode ser exagerado e resultar em código desnecessário.
+
+Aplicabilidade:
+	O Builder é útil quando você precisa criar objetos complexos que exigem uma série de etapas para serem montados. 
+	É especialmente aplicável quando o mesmo processo de construção pode ser usado para criar diferentes versões do objeto.
+
+Exemplos reais simples:
+	1. Montagem de um Computador: Imagine que você está comprando um computador online. Você pode escolher o tipo de processador, 
+		a quantidade de memória RAM, o tamanho do disco rígido, etc. O Builder permite que você monte o "computador" final 
+		escolhendo as partes que deseja, sem precisar saber como montá-lo tecnicamente.
+	2. Pedido de Pizza: Ao fazer um pedido de pizza, você escolhe o tamanho, o tipo de massa, os recheios, etc. 
+	   O Builder seria como o sistema da pizzaria que organiza suas escolhas e monta a pizza conforme suas preferências.
+
+Resumindo
+	o Builder é uma ótima ferramenta quando você precisa criar objetos complexos de maneira organizada e flexível, 
+	mas deve ser usado com cuidado para evitar complicações desnecessárias em projetos simples.

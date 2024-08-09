@@ -1,4 +1,5 @@
 ﻿using DesignPatterns.Creational_Patterns.Abstract_Factory;
+using DesignPatterns.Creational_Patterns.Builder;
 using DesignPatterns.Creational_Patterns.Factory_Method;
 using DesignPatterns.Creational_Patterns.Singleton;
 
@@ -12,7 +13,8 @@ while (designPatternOption != 0)
         "\n-------Creational Patterns-------" +
         "\n1)Factory Method" +
         "\n2)Abstract Factory" +
-        "\n3)Singleton");
+        "\n3)Singleton" +
+        "\n4)Builder");
 
     Console.Write("\nDigite a opção que deseja: ");
     designPatternOption = Convert.ToInt32(Console.ReadLine());
@@ -30,6 +32,9 @@ while (designPatternOption != 0)
             break;
         case 3:
             new SingletonClient().ConsumeDB();
+            break;
+        case 4:
+            new BuilderClient().CreateCars();
             break;
         default:
             break;
