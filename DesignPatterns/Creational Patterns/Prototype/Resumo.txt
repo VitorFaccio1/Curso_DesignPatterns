@@ -1,0 +1,29 @@
+Prototype
+O que é?
+	O Prototype é um padrão de design criacional que permite criar cópias exatas de objetos sem precisar
+	saber a classe concreta desses objetos. Ele faz isso através de um método de clonagem que é definido 
+	diretamente no objeto que será copiado.
+
+Prós:
+	1)Desacoplamento: Permite clonar objetos sem depender diretamente de suas classes concretas, tornando o código mais flexível.
+	2)Redução de código repetitivo: Evita a repetição de códigos de inicialização, já que protótipos pré-construídos podem ser clonados.	
+	3)Facilidade na criação de objetos complexos: Você pode facilmente criar novos objetos complexos clonando protótipos existentes.
+
+Contras:
+	1)Complexidade na clonagem: Clonar objetos com referências circulares pode ser complicado e pode exigir cuidado extra.
+	2)Necessidade de inicialização: O objeto clonado pode precisar de uma inicialização complexa para estar totalmente funcional.
+
+Quando Usar?
+	1)Desconhecimento da classe concreta: Quando você precisa clonar objetos, mas não sabe sua classe concreta,
+		como ao trabalhar com interfaces ou objetos fornecidos por terceiros.
+	2)Redução de subclasses: Quando você tem muitas subclasses que diferem apenas na forma de inicialização e quer 
+		simplificar o código utilizando protótipos pré-construídos.
+
+Exemplos Reais Simples:
+	1)Design de personagens em jogos: Um jogo pode ter um protótipo básico de um personagem (ex.: guerreiro) 
+	e, ao criar novos personagens, ele apenas clona o protótipo e faz pequenas alterações, como mudar o nome ou a cor da roupa.
+
+Resumo
+	O Prototype é um padrão de design útil para clonar objetos de forma eficiente e flexível, especialmente quando a classe 
+	concreta do objeto é desconhecida ou quando você deseja evitar a criação de várias subclasses. 
+	Embora seja poderoso, pode ser complicado ao lidar com objetos complexos, especialmente aqueles com referências circulares.
