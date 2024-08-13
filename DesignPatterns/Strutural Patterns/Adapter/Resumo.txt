@@ -1,0 +1,31 @@
+O que é:
+	O Adapter é um padrão de projeto estrutural que permite que objetos com interfaces incompatíveis trabalhem juntos. 
+	Também conhecido como Wrapper, ele age como um intermediário que traduz a interface de um 
+	objeto para um formato que outro objeto possa entender.
+
+Prós:
+	1) Princípio de responsabilidade única: Separa a lógica de conversão de interfaces ou formatos da lógica principal do programa.
+	2) Princípio aberto/fechado: Permite a adição de novos adaptadores sem alterar o código existente, desde que sigam a interface cliente.
+
+Contras:
+	1) Aumenta a complexidade do código ao introduzir novas interfaces e classes.
+	2) Em alguns casos, pode ser mais simples ajustar a classe existente do que criar um adaptador.
+
+Quando Usar:
+	1) Quando você precisa usar uma classe existente, mas sua interface não é compatível com o resto do seu código.
+	2) Quando deseja reutilizar subclasses que não possuem uma funcionalidade comum e não pode ser adicionada à superclasse.
+
+Exemplos Reais Simples:
+	1)Imagine uma aplicação que baixa dados de ações da bolsa em XML, mas uma nova biblioteca de análise de dados só trabalha com JSON. 
+	Em vez de modificar a biblioteca, você pode criar um adaptador que converte o XML para JSON, permitindo a integração sem 
+	alterar o código da biblioteca.
+
+	2)Quando você viaja do Brasil para a Europa pela primeira vez, você pode ter uma pequena surpresa quando tenta carregar seu laptop. 
+	O plugue e os padrões de tomadas são diferentes em diferentes países. É por isso que seu plugue do Brasil não vai caber 
+	em uma tomada da Alemanha. O problema pode ser resolvido usando um adaptador de tomada que tenha o estilo de tomada Brasileira 
+	e o plugue no estilo Europeu.
+
+Conclusão:
+	O Adapter é uma solução eficaz para integrar classes com interfaces incompatíveis em uma aplicação existente, 
+	promovendo a reutilização de código e mantendo o princípio de responsabilidade única. 
+	No entanto, é importante considerar se a complexidade adicional justifica sua implementação.

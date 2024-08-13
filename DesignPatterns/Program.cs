@@ -3,6 +3,7 @@ using DesignPatterns.Creational_Patterns.Builder;
 using DesignPatterns.Creational_Patterns.Factory_Method;
 using DesignPatterns.Creational_Patterns.Prototype;
 using DesignPatterns.Creational_Patterns.Singleton;
+using DesignPatterns.Strutural_Patterns.Adapter;
 
 var designPatternOption = 1;
 
@@ -16,7 +17,9 @@ while (designPatternOption != 0)
         "\n2)Abstract Factory" +
         "\n3)Singleton" +
         "\n4)Builder" +
-        "\n5)Prototype");
+        "\n5)Prototype" +
+        "\n\n-------Strutural Patterns-------" +
+        "\n6)Adapter");
 
     Console.Write("\nDigite a opção que deseja: ");
     designPatternOption = Convert.ToInt32(Console.ReadLine());
@@ -40,6 +43,9 @@ while (designPatternOption != 0)
             break;
         case 5:
             new PrototypeClient().Consume();
+            break;
+        case 6:
+            new CloudComputing().ProcessBills();
             break;
         default:
             break;
