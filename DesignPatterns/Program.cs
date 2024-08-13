@@ -45,7 +45,7 @@ while (designPatternOption != 0)
             new PrototypeClient().Consume();
             break;
         case 6:
-            new CloudComputing().ProcessBills();
+            new Client().ProcessBills();
             break;
         default:
             break;

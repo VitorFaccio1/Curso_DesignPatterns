@@ -5,19 +5,29 @@ namespace DesignPatterns.Strutural_Patterns.Adapter;
 public class Adapter : IAdapter
 {
     BusinessLegacy legacy;
+    BusinessNew newBussines;
 
     public Adapter(BusinessLegacy legacy)
     {
         this.legacy = legacy;
     }
 
+    public Adapter(BusinessNew business)
+    {
+        this.newBussines = business;
+    }
+
     public string ExecuteRotineBillsToPay(string month)
     {
-        return legacy.ExecuteRoutineBillsToPay(month);
+        return legacy != null
+            ? legacy.ExecuteRoutineBillsToPay(month)
+            : newBussines.ExecuteRoutineBillsToPay(month);
     }
 
     public string ExecuteRotineBillsToRecieve(string month)
     {
-        return legacy.ExecuteRoutineBillsToRecieve(month);
+        return legacy != null
+            ? legacy.ExecuteRoutineBillsToRecieve(month)
+            : newBussines.ExecuteRoutineBillsToRecieve(month);
     }
 }
