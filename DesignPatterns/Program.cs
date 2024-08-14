@@ -4,6 +4,7 @@ using DesignPatterns.Creational_Patterns.Factory_Method;
 using DesignPatterns.Creational_Patterns.Prototype;
 using DesignPatterns.Creational_Patterns.Singleton;
 using DesignPatterns.Strutural_Patterns.Adapter;
+using DesignPatterns.Strutural_Patterns.FlyWeight;
 
 var designPatternOption = 1;
 
@@ -19,7 +20,8 @@ while (designPatternOption != 0)
         "\n4)Builder" +
         "\n5)Prototype" +
         "\n\n-------Strutural Patterns-------" +
-        "\n6)Adapter");
+        "\n6)Adapter" +
+        "\n7)FlyWeight");
 
     Console.Write("\nDigite a opção que deseja: ");
     designPatternOption = Convert.ToInt32(Console.ReadLine());
@@ -46,6 +48,9 @@ while (designPatternOption != 0)
             break;
         case 6:
             new Client().ProcessBills();
+            break;
+        case 7:
+            new FlyWeightClient().Consume();
             break;
         default:
             break;

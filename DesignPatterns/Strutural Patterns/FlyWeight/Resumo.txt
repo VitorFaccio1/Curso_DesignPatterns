@@ -1,0 +1,46 @@
+Padrão de Projeto Flyweight (Peso Mosca)
+
+O que é?
+	O Flyweight é um padrão de projeto estrutural que ajuda a reduzir o consumo de memória em um programa, 
+	especialmente quando se lida com um grande número de objetos similares. Ele faz isso ao compartilhar partes 
+	comuns do estado dos objetos, em vez de manter todos os dados em cada objeto individualmente. Isso é particularmente útil 
+	em situações onde muitos objetos semelhantes precisam coexistir na memória, como em jogos, gráficos ou sistemas que 
+	gerenciam muitos dados similares.
+
+
+Estado Intrínseco:
+	Partes do estado que são imutáveis e comuns entre muitos objetos.
+
+Estado Extrínseco:
+	Partes do estado que variam e são únicas para cada objeto.
+
+O estado intrínseco é compartilhado entre vários objetos, reduzindo significativamente a quantidade de memória necessária.
+O estado extrínseco, por sua vez, é passado como parâmetro nos métodos que o utilizam.
+
+Exemplo Real Simples
+	Em um jogo, ao invés de criar um objeto separado para cada bala com sua própria cor e sprite,
+	você pode criar um único objeto "Bala" que armazena essas propriedades. Então, para cada bala na tela, você mantém apenas
+	as informações variáveis (como posição e direção) e compartilha o objeto "Bala" para representar todas as balas.
+
+Prós
+	1) Economia de Memória: Reduz o consumo de RAM ao compartilhar dados comuns entre objetos.
+	2) Melhor Desempenho: Em sistemas com muitos objetos semelhantes, pode melhorar o desempenho ao evitar duplicação desnecessária de dados.
+
+Contras
+	1) Complexidade Aumentada: O código pode se tornar mais complicado de entender e manter, especialmente para novos
+	   desenvolvedores na equipe.
+	2) Trade-off entre CPU e RAM: O ganho em RAM pode resultar em maior uso de CPU, pois o estado extrínseco precisa
+	   ser constantemente recalculado.
+
+Quando Usar?
+	1) Seu programa precisa gerenciar um grande número de objetos semelhantes.
+	2) O consumo de RAM é um problema devido à duplicação de dados nos objetos.
+	3) A maioria dos estados dos objetos podem ser tornadas extrinseca.
+	4) A aplicação não depende da identidade dos objetos.
+	5) Muitos objetos podem ser substituido por poucos objetos compartilhados.
+
+Conclusão
+	O padrão Flyweight é uma solução eficaz para otimizar o uso de memória em aplicações que manipulam muitos objetos similares.
+	No entanto, é importante avaliar se a complexidade adicional e o possível aumento no uso de CPU justificam sua implementação. 
+	Para aplicações onde a RAM é um recurso crítico, o Flyweight pode ser extremamente valioso, permitindo que o sistema suporte 
+	mais objetos sem comprometer a performance.
