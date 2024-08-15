@@ -1,0 +1,29 @@
+
+O que é o Bridge?
+	O Bridge é um padrão de design estrutural que permite que você separe uma classe em duas hierarquias distintas: abstração e implementação. 
+	Essa separação facilita o desenvolvimento e a manutenção do código, permitindo que você desenvolva essas partes de forma independente.
+
+Quando Usar?
+
+	1) Você precisa evitar a criação de muitas subclasses para diferentes combinações de funcionalidades (como formas geométricas de várias cores).
+	2) Deseja que seu código seja mais modular, permitindo que diferentes partes do sistema possam ser alteradas sem impactar outras.
+	3) Há a necessidade de trocar implementações durante a execução, como mudar o comportamento de um sistema em diferentes plataformas.
+
+Prós:
+	1) Facilita a manutenção e a expansão do código.
+	2) Segue o princípio aberto/fechado, permitindo a adição de novas funcionalidades sem modificar o código existente.
+	3) Promove a responsabilidade única, separando a lógica de alto nível da implementação detalhada.
+
+Contras:
+	1) Pode tornar o código mais complexo desnecessariamente, se aplicado em casos onde uma simples herança seria suficiente.
+
+
+Exemplo
+	Imagine que você tem formas geométricas (como círculos e quadrados) e quer pintá-las de diferentes cores. 
+	Sem o Bridge, você acabaria criando várias subclasses para cada combinação de forma e cor (CírculoVermelho, QuadradoAzul, etc.). 
+	Com o Bridge, você separa as formas das cores, permitindo combiná-las de maneira flexível.
+
+Conclusão
+	O Bridge é um poderoso padrão de design que ajuda a gerenciar a complexidade em sistemas que precisam lidar com múltiplas dimensões de variação. 
+	Ele promove um design mais modular e flexível, facilitando a manutenção e a extensão do código, embora sua aplicação deva ser cuidadosa 
+	para não introduzir complexidade desnecessária.

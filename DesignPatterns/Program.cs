@@ -4,6 +4,7 @@ using DesignPatterns.Creational_Patterns.Factory_Method;
 using DesignPatterns.Creational_Patterns.Prototype;
 using DesignPatterns.Creational_Patterns.Singleton;
 using DesignPatterns.Strutural_Patterns.Adapter;
+using DesignPatterns.Strutural_Patterns.Brigde;
 using DesignPatterns.Strutural_Patterns.FlyWeight;
 
 var designPatternOption = 1;
@@ -21,7 +22,8 @@ while (designPatternOption != 0)
         "\n5)Prototype" +
         "\n\n-------Strutural Patterns-------" +
         "\n6)Adapter" +
-        "\n7)FlyWeight");
+        "\n7)FlyWeight" +
+        "\n8)Brigde");
 
     Console.Write("\nDigite a opção que deseja: ");
     designPatternOption = Convert.ToInt32(Console.ReadLine());
@@ -51,6 +53,9 @@ while (designPatternOption != 0)
             break;
         case 7:
             new FlyWeightClient().Consume();
+            break;
+        case 8:
+            new BridgeClient().GetPensPincelsFromStock();
             break;
         default:
             break;
