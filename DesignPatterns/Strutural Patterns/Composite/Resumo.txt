@@ -1,0 +1,30 @@
+O que é o Padrão Composite?
+
+	O Composite é um padrão de design estrutural usado para organizar objetos em estruturas hierárquicas, como árvores, 
+	permitindo que você trate grupos de objetos da mesma forma que objetos individuais. 
+	Ele é útil quando você tem elementos simples e complexos que precisam ser manipulados de maneira uniforme.
+
+Prós:
+
+	1) Facilita o trabalho com estruturas complexas de forma mais conveniente.
+	2) Permite que o código seja facilmente expandido para novos tipos de elementos sem quebrar o código existente.
+	3) O uso de polimorfismo e recursão torna a manipulação dessas estruturas mais eficiente.
+
+Contras:
+
+	1) Pode ser difícil criar uma interface comum para classes muito diferentes, o que pode levar a generalizações excessivas.
+	2) A implementação pode tornar a interface mais complexa e difícil de entender.
+
+Quando Usar?
+
+	1) Use o Composite quando precisar representar um modelo que pode ser organizado como uma árvore, como um sistema de pedidos que envolve produtos e caixas.
+	2) Quando é necessário que o código cliente trate objetos simples e compostos de forma uniforme.
+
+Exemplo Simples:
+	Imagine um sistema de pedidos em que você tem produtos e caixas que podem conter produtos e outras caixas. 
+	O Composite permite calcular o preço total de um pedido sem precisar se preocupar se o item é um produto ou uma caixa com outros itens dentro.
+
+Conclusão:
+	O Composite é ideal para situações em que você tem estruturas hierárquicas complexas e precisa manipulá-las de maneira consistente e eficiente. 
+	Ele simplifica o tratamento de grupos de objetos, mas pode aumentar a complexidade da interface,
+	especialmente em sistemas com muitos tipos de elementos diferentes.
