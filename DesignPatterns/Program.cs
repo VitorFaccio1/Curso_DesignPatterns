@@ -6,6 +6,7 @@ using DesignPatterns.Creational_Patterns.Singleton;
 using DesignPatterns.Strutural_Patterns.Adapter;
 using DesignPatterns.Strutural_Patterns.Brigde;
 using DesignPatterns.Strutural_Patterns.Composite;
+using DesignPatterns.Strutural_Patterns.Decorator;
 using DesignPatterns.Strutural_Patterns.FlyWeight;
 
 var designPatternOption = 1;
@@ -25,7 +26,8 @@ while (designPatternOption != 0)
         "\n6)Adapter" +
         "\n7)FlyWeight" +
         "\n8)Brigde" +
-        "\n9)Composite");
+        "\n9)Composite" +
+        "\n10)Decorator");
 
     Console.Write("\nDigite a opção que deseja: ");
     designPatternOption = Convert.ToInt32(Console.ReadLine());
@@ -61,6 +63,9 @@ while (designPatternOption != 0)
             break;
         case 9:
             new CompositeClient().Buy();
+            break;
+        case 10:
+            new DecoratorClient().ConsumeServices();
             break;
         default:
             break;

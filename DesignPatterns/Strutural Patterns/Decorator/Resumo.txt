@@ -1,0 +1,29 @@
+O que é:
+	O padrão de projeto Decorator permite que você adicione funcionalidades extras a um objeto de forma flexível e dinâmica, sem alterar sua estrutura original.
+	Ele faz isso "envolvendo" o objeto original em um novo objeto que adiciona o comportamento desejado, mantendo a mesma interface do objeto original.
+
+Prós:
+	1) Flexibilidade: Permite adicionar funcionalidades a objetos de forma dinâmica, sem a necessidade de criar subclasses.
+	2) Composição: Você pode combinar múltiplos decoradores para criar novas funcionalidades a partir de componentes existentes.
+	3) Isolamento: Cada decorador pode focar em uma única responsabilidade, tornando o código mais modular e fácil de manter.
+
+Contras:
+	1) Complexidade: O uso excessivo de decoradores pode tornar o código mais difícil de entender, já que as funcionalidades ficam distribuídas entre muitos objetos.
+	2) Performance: Cada camada de decorador adiciona um pouco de overhead, o que pode impactar a performance se utilizado em excesso.
+	3) Depuração: Depurar código que utiliza muitos decoradores pode ser desafiador, pois o fluxo de execução passa por várias camadas.
+
+
+Quando usar:
+	1) Quando você precisa adicionar funcionalidades a objetos de forma dinâmica e não quer modificar o código existente ou criar inúmeras subclasses.
+	2) Quando você deseja criar uma estrutura modular onde cada funcionalidade pode ser adicionada ou removida conforme necessário.
+
+Exemplo simples:
+	Imagine que você tenha uma interface Café com um método Custo(). Uma classe concreta CaféSimples implementa essa interface,
+	retornando o custo básico de um café. Agora, você deseja adicionar ingredientes ao café, como leite, açúcar, e chantilly. 
+	Em vez de criar subclasses para cada combinação, você pode criar decoradores como LeiteDecorator, AçúcarDecorator e ChantillyDecorator,
+	cada um adicionando seu próprio custo ao café. Assim, você pode "decorar" o café com esses ingredientes de forma dinâmica.
+
+Conclusão:
+	O padrão Decorator é uma solução poderosa para adicionar comportamentos extras a objetos de maneira flexível e dinâmica.
+	Embora traga vantagens como modularidade e flexibilidade, deve ser usado com cuidado para evitar complexidade excessiva e dificuldades na depuração.
+	Ele é ideal para situações onde a extensão de funcionalidades precisa ser feita sem alterar a estrutura original ou criar uma proliferação de subclasses.
