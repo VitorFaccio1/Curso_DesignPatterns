@@ -1,0 +1,31 @@
+O que é o Facade?
+	O Facade (ou Fachada) é um padrão de design que serve para simplificar a interação com sistemas ou bibliotecas complexas. 
+	Ele faz isso criando uma interface mais simples e fácil de usar, escondendo a complexidade de um conjunto de classes ou subsistemas. 
+	É como se você tivesse um "controle remoto" que executa várias operações complicadas em segundo plano com apenas um clique.
+
+Prós:
+	1) Simplicidade: O Facade oferece uma interface limpa e fácil de entender para sistemas complexos, tornando o código mais legível e fácil de manter.
+	2) Isolamento: Ele isola o código da complexidade do subsistema, facilitando a troca ou atualização de componentes sem afetar o resto da aplicação.
+	3) Redidação: Facilita a reutilização do código ao criar pontos de acesso claros e bem definidos para funcionalidades específicas.
+
+Contras:
+	1) Objeto Deus: Se não for bem projetado, o Facade pode se tornar um "objeto deus", centralizando muitas responsabilidades e tornando-se difícil de manter.
+	2) Flexibilidade: Ele pode limitar o acesso a funcionalidades mais avançadas do subsistema, já que só expõe as operações mais comuns e necessárias.
+
+Quando Usar o Facade?
+	1) Use o Facade quando você está lidando com uma biblioteca ou sistema complexo e deseja simplificar a interação com ele. 
+		É útil em cenários onde o sistema tem muitas funcionalidades, mas você só precisa de algumas.
+	2) Também é indicado para estruturar subsistemas em camadas, criando um ponto de acesso claro para cada camada.
+
+Exemplos Simples
+	1) Exemplo do Mundo Real: Imagine que você quer fazer um pedido em uma loja. Em vez de falar com o departamento de estoque, 
+		pagamentos e entregas individualmente, você fala com um operador (a fachada), que lida com tudo para você.
+	2) Exemplo em Código: Se você tem um sistema que converte vídeos em vários formatos, em vez de lidar com todas as classes complexas 
+		que fazem a conversão, você pode criar uma classe VideoConverter com um método simples como convert(file, format), 
+		que por trás das cenas lida com toda a complexidade.
+
+Conclusão
+	O padrão Facade é uma excelente escolha quando você precisa simplificar interações com sistemas complexos, 
+	tornando o código mais global, organizado e fácil de manter. Embora tenha suas limitações, 
+	como o risco de centralizar demais as responsabilidades, ele é uma ferramenta poderosa para melhorar 
+	a arquitetura de software e isolar a complexidade.
