@@ -1,0 +1,65 @@
+O que é o Padrão Proxy?
+	O Proxy é como um "representante" de outro objeto em um sistema. Imagine que você tenha um amigo que não pode atender 
+	todas as suas ligações porque está muito ocupado. Então, ele te dá o número de outra pessoa (o "proxy") que pode 
+	atender essas ligações em seu lugar, filtrar o que é importante, e só passar o que for realmente necessário para o seu amigo. 
+	Na programação, o Proxy é uma classe que age em nome de outra classe, controlando o acesso a ela.
+
+Prós:
+	1) Controle: Você pode controlar como e quando um objeto é acessado, o que pode ajudar a economizar recursos, 
+		como memória e tempo de processamento.
+	2) Segurança: Pode proteger o acesso a certos recursos, garantindo que apenas quem tem permissão possa usá-los.
+	3) Desempenho: Pode melhorar o desempenho ao evitar chamadas desnecessárias a serviços externos ou objetos pesados.
+
+Contras:
+	1) Complexidade: Adiciona mais código ao sistema, o que pode torná-lo mais difícil de entender e manter.
+	2) Atrasos: Pode causar pequenos atrasos, especialmente se o Proxy precisa fazer algum trabalho adicional 
+		antes de acessar o objeto real.
+
+Exemplo Simples:
+	Imagine que você quer assistir a um vídeo no YouTube. Normalmente, seu computador precisa baixar o vídeo toda vez que 
+	você quiser assisti-lo. Usando o Proxy, o vídeo é baixado uma vez e, nas próximas vezes que você quiser assistir, 
+	ele já estará salvo (em cache), sem precisar baixar de novo. Isso economiza tempo e dados de internet.
+
+Quando Usar:
+	1) Quando você tem um objeto que consome muitos recursos e só é necessário em alguns momentos.
+	2) Quando quer controlar quem pode acessar certos recursos.
+	3) Quando quer fazer cache de resultados para melhorar o desempenho.
+	4) Quando precisa trabalhar com serviços remotos e quer evitar problemas com a rede.
+
+Conclusão:
+	O padrão Proxy é uma forma eficiente de controlar o acesso a objetos em um sistema, economizando recursos e 
+	melhorando o desempenho. Porém, deve ser usado com cuidado para não adicionar complexidade desnecessária ao código.
+
+1. Inicialização Preguiçosa (Proxy Virtual)
+	1) Aplicabilidade: Quando você tem um objeto pesado em termos de recursos, que só precisa ser carregado em certos momentos. 
+		Em vez de criar o objeto imediatamente, o Proxy pode atrasar sua criação até que seja realmente necessário.
+
+	2) Exemplo: Imagine um sistema de gestão de imagens onde cada imagem é muito grande. 
+		Em vez de carregar todas as imagens ao iniciar o sistema, o Proxy só carrega uma imagem específica quando ela for solicitada.
+
+2. Controle de Acesso (Proxy de Proteção)
+	1) Aplicabilidade: Quando você precisa restringir o acesso a um objeto, permitindo que apenas certos clientes possam interagir com ele.
+	2) Exemplo: Um sistema operacional onde certos processos são críticos e só devem ser acessados por usuários com permissões específicas. 
+		Um Proxy pode verificar as credenciais antes de permitir o acesso ao objeto de serviço.
+
+3. Execução Local de um Serviço Remoto (Proxy Remoto)
+	1) Aplicabilidade: Quando o objeto de serviço está localizado em um servidor remoto e você deseja interagir com ele
+		como se estivesse localmente, lidando automaticamente com a comunicação de rede.
+	2) Exemplo: Um aplicativo cliente que interage com uma API de um servidor. O Proxy lida com as requisições de rede 
+		e passa os dados para o objeto remoto.
+
+4. Cache de Resultados (Proxy de Cache)
+	1) Aplicabilidade: Quando você precisa otimizar as operações de leitura de dados ao armazenar em cache os 
+		resultados de operações caras ou frequentes.
+	2) Exemplo: Em uma aplicação que busca dados repetidamente de uma base de dados, 
+		o Proxy pode armazenar os resultados das consultas para evitar novas idas ao banco, retornando os dados do cache.
+
+5. Registro de Pedidos (Proxy de Registro)
+	1) Aplicabilidade: Quando você precisa manter um histórico das interações com um objeto, registrando todas as operações realizadas.
+	2) Exemplo: Em um sistema financeiro, onde cada transação precisa ser registrada,
+		o Proxy pode interceptar as operações e registrar as informações antes de passar para o objeto de serviço.
+
+6. Referência Inteligente
+	1) Aplicabilidade: Quando você precisa garantir que um objeto pesado seja descartado assim que não houver mais clientes usando-o.
+	2) Exemplo: Um sistema de gerenciamento de memória onde objetos que não são mais referenciados 
+		por nenhum cliente devem ser automaticamente removidos para liberar recursos.
