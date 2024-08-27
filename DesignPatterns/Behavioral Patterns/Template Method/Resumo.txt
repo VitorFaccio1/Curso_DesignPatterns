@@ -1,0 +1,40 @@
+O que é o Template Method?
+	O Template Method é um padrão de projeto comportamental usado para definir o esqueleto (ou "roteiro") de um algoritmo em uma classe base, 
+	permitindo que subclasses sobrescrevam partes específicas desse algoritmo sem alterar a estrutura geral.
+
+Prós:
+	1) Flexibilidade: Permite que você modifique partes de um algoritmo sem mudar sua estrutura geral.
+	2) Reutilização de Código: Reduz a duplicação de código, pois a lógica comum fica na classe base.
+	3) Facilidade de Manutenção: Mudanças na estrutura do algoritmo só precisam ser feitas na classe base, e todas as subclasses automaticamente seguem essa mudança.
+
+Contras:
+	1) Risco de Violação: Pode violar o princípio de substituição de Liskov se as subclasses alterarem demais as etapas, comprometendo a consistência do algoritmo.
+	2) Complexidade: Algoritmos com muitas etapas podem tornar o código difícil de entender e manter.
+	3) Limitação: Subclasses são limitadas ao esqueleto definido pela classe base e não podem alterar a estrutura do algoritmo.
+
+Quando Usar o Template Method:
+	1) Reutilizar Algoritmos Sem Duplicar Código: Use o Template Method quando você tem várias classes que implementam algoritmos semelhantes, 
+		mas com algumas variações específicas. Em vez de duplicar o código em cada classe, você pode colocar o esqueleto do algoritmo na 
+		classe base e permitir que as subclasses personalizem partes específicas.
+	2) Manter a Estrutura de Algoritmos: Quando você deseja manter a estrutura geral de um algoritmo, mas permitir que subclasses 
+		personalizem algumas etapas, o Template Method é uma boa escolha. Isso é útil em sistemas onde a 
+		lógica principal deve permanecer consistente, mas detalhes específicos podem variar.
+	3) Evitar Código Condicional Excessivo: Se você perceber que seu código cliente tem muitas condições para lidar com
+		diferentes variações de um algoritmo, o Template Method pode ajudar a simplificar isso. Ele permite que você use 
+		polimorfismo para chamar a implementação correta, eliminando a necessidade de condições no código.
+
+Exemplos Simples e Reais
+	1) Preparação de Café e Chá: Imagine uma classe base com o método padrão "preparar bebida". O algoritmo inclui ferver a água,
+		preparar a bebida, adicionar açúcar e mexer. Subclasses de "Café" e "Chá" podem sobrescrever apenas a parte 
+		de preparar a bebida (café ou chá), mas a estrutura geral de fazer a bebida permanece igual.
+	2) Processamento de Documentos: Uma aplicação que processa documentos em diferentes formatos (PDF, DOC, CSV). 
+		O algoritmo para processar um documento inclui abrir o arquivo, extrair dados, e salvar resultados. 
+		A classe base define a estrutura, e as subclasses implementam a extração de dados específica para cada formato de documento.
+	3) Imagine que você tem uma receita para fazer um bolo. A receita é sempre a mesma: misturar os ingredientes, assar o bolo, 
+		e decorar. No entanto, você pode variar a decoração ou os ingredientes, mas a estrutura da receita permanece igual. 
+		No Template Method, a "receita" é o algoritmo, e as partes que você pode alterar são as etapas específicas.
+
+Conclusão
+	O Template Method é útil quando você precisa de um algoritmo que pode ter variações em suas etapas, mas que deve seguir uma estrutura fixa. 
+	Ele permite a reutilização de código e facilita a manutenção, mas deve ser usado com cuidado para evitar complexidade e violações de princípios de design. 
+	Em aplicações reais, ele pode ser encontrado em cenários onde processos semelhantes compartilham uma estrutura comum, mas precisam de pequenas adaptações.
