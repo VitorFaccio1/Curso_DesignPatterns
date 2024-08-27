@@ -1,0 +1,29 @@
+O que é?
+	O Interpreter é um padrão que, dado um problema ou uma linguagem, define uma maneira de interpretar e executar suas regras ou sentenças. 
+	Em termos simples, imagine que você tem uma série de comandos ou expressões matemáticas, e você quer criar um sistema que entenda e execute esses comandos.
+
+Prós
+	1) Facilidade para adicionar novas regras: Se a linguagem ou conjunto de comandos precisa ser expandido, é fácil adicionar novas regras ou símbolos.
+	2) Boa estruturação para linguagens simples: Para linguagens ou expressões relativamente simples, o padrão Interpreter 
+		proporciona uma maneira clara e organizada de implementar a interpretação.
+
+Contras
+	1) Complexidade para linguagens grandes: Para linguagens ou expressões complexas, o padrão pode se tornar difícil de manter, 
+		pois pode requerer muitas classes e estruturas.
+	2) Desempenho: Pode ser menos eficiente em termos de desempenho, especialmente se a linguagem ou as regras forem muito complexas, 
+		já que cada regra ou símbolo pode demandar uma classe ou função separada.
+
+Quando usar?
+	1) Linguagens ou regras simples: Quando você tem uma linguagem simples, como uma calculadora básica ou um conjunto de comandos específicos, 
+		o Interpreter pode ser uma boa escolha.
+	2) Expressões fixas e previsíveis: Se as expressões que você precisa interpretar são fixas e não mudam com frequência, o padrão é apropriado.
+
+Exemplo simples
+	Imagine que você está criando uma mini-calculadora que só entende adição e subtração.
+	Você pode criar uma classe para cada operação, como AddExpression e SubtractExpression. 
+	Depois, você cria um "interpretador" que, ao receber uma expressão como "3 + 2 - 1", sabe como calcular o resultado.
+
+Conclusão
+	O padrão Interpreter é útil para interpretar sentenças ou comandos em linguagens ou sistemas simples. 
+	Embora tenha suas vantagens, como a facilidade de extensão, ele pode se tornar complexo e de difícil manutenção em sistemas maiores. 
+	É ideal para situações onde a simplicidade e a clareza são mais importantes do que a eficiência ou a escalabilidade.

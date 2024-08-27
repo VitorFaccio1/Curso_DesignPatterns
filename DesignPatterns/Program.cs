@@ -1,4 +1,6 @@
-﻿using DesignPatterns.Creational_Patterns.Abstract_Factory;
+﻿using DesignPatterns.Behavioral_Patterns.Interpreter.Calculator;
+using DesignPatterns.Behavioral_Patterns.Template_Method;
+using DesignPatterns.Creational_Patterns.Abstract_Factory;
 using DesignPatterns.Creational_Patterns.Builder;
 using DesignPatterns.Creational_Patterns.Factory_Method;
 using DesignPatterns.Creational_Patterns.Prototype;
@@ -7,9 +9,7 @@ using DesignPatterns.Strutural_Patterns.Adapter;
 using DesignPatterns.Strutural_Patterns.Brigde;
 using DesignPatterns.Strutural_Patterns.Composite;
 using DesignPatterns.Strutural_Patterns.Decorator;
-using DesignPatterns.Strutural_Patterns.Facade;
 using DesignPatterns.Strutural_Patterns.FlyWeight;
-using DesignPatterns.Strutural_Patterns.Proxy;
 
 var designPatternOption = 1;
 
@@ -30,8 +30,9 @@ while (designPatternOption != 0)
         "\n8)Brigde" +
         "\n9)Composite" +
         "\n10)Decorator" +
-        "\n11)Facade" +
-        "\n12)Proxy");
+        "\n\n-------Behavioral Patterns-------" +
+        "\n11)Template Method" +
+        "\n12)Interpreter");
 
     Console.Write("\nDigite a opção que deseja: ");
     designPatternOption = Convert.ToInt32(Console.ReadLine());
@@ -72,10 +73,10 @@ while (designPatternOption != 0)
             new DecoratorClient().ConsumeServices();
             break;
         case 11:
-            new FacadeManager().ExecuteComplexity();
+            new TemplateMethodClient().Menu();
             break;
         case 12:
-            new ProxyClient().ConnectClientVPN();
+            new CalculatorClient().Calculate();
             break;
         default:
             break;
