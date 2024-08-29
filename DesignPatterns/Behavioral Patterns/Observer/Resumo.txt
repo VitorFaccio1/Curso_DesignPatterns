@@ -1,0 +1,30 @@
+O padrão de projeto Observer, também conhecido como Observador, Event-Subscriber ou Listener, é um padrão comportamental que permite que um objeto 
+(o publicador) notifique automaticamente uma lista de outros objetos (os assinantes) sobre mudanças no seu estado. 
+Esse mecanismo é útil em situações onde múltiplos objetos precisam reagir a eventos ocorridos em outro 
+objeto sem a necessidade de os objetos estarem fortemente acoplados.
+
+Solução
+	O Observer propõe que a classe publicadora mantenha uma lista de assinantes que estão interessados em certos eventos. 
+	Quando um evento acontece, a publicadora notifica todos os seus assinantes, sem precisar saber detalhes sobre eles. 
+	Isso é feito por meio de uma interface comum que todos os assinantes implementam.
+
+Estrutura
+	Publicadora: Contém um mecanismo de inscrição e notificação para os assinantes.
+	Assinante: Define uma interface que será implementada por todas as classes que desejam receber notificações.
+	Método de Notificação: Usado pela publicadora para enviar informações aos assinantes quando um evento ocorre.
+
+Exemplo
+	Suponha que você tenha um editor de texto (publicador) que deseja notificar diferentes serviços (assinantes) sempre que um arquivo é salvo ou aberto. 
+	Esses serviços podem ser um sistema de logging ou um serviço de alertas por email. 
+	Cada serviço se inscreve no evento relevante, e quando o evento ocorre, o editor de texto notifica todos os serviços inscritos.
+
+Aplicabilidade
+	1) Mudanças em um objeto precisam ser refletidas em outros objetos, mas o número e a natureza dos objetos associados podem mudar.
+	2) Você precisa que os objetos observadores se inscrevam ou cancelem sua inscrição dinamicamente.
+
+Vantagens
+	1) Segue o princípio aberto/fechado: você pode adicionar novos assinantes sem modificar a publicadora.
+	2) Facilita o desacoplamento entre a publicadora e seus assinantes.
+
+Desvantagens
+	1) Os assinantes são notificados em ordem aleatória, o que pode ser problemático se a ordem for importante.

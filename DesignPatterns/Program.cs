@@ -1,4 +1,5 @@
 ﻿using DesignPatterns.Behavioral_Patterns.Interpreter.Calculator;
+using DesignPatterns.Behavioral_Patterns.Observer;
 using DesignPatterns.Behavioral_Patterns.Template_Method;
 using DesignPatterns.Creational_Patterns.Abstract_Factory;
 using DesignPatterns.Creational_Patterns.Builder;
@@ -32,7 +33,8 @@ while (designPatternOption != 0)
         "\n10)Decorator" +
         "\n\n-------Behavioral Patterns-------" +
         "\n11)Template Method" +
-        "\n12)Interpreter");
+        "\n12)Interpreter" +
+        "\n13)Observer" );
 
     Console.Write("\nDigite a opção que deseja: ");
     designPatternOption = Convert.ToInt32(Console.ReadLine());
@@ -77,6 +79,9 @@ while (designPatternOption != 0)
             break;
         case 12:
             new CalculatorClient().Calculate();
+            break;
+        case 13:
+            new ObserverClient().EnviaEmail();
             break;
         default:
             break;
