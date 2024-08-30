@@ -1,0 +1,28 @@
+Padrão de Projeto Visitor
+	O que é? O Visitor é um padrão de projeto comportamental que permite separar algoritmos dos objetos sobre os quais eles operam. 
+	Em vez de integrar comportamentos adicionais em classes existentes, o Visitor cria uma nova classe para esses comportamentos, 
+	mantendo as classes originais focadas em suas responsabilidades principais.
+
+Prós:
+	1) Separação de responsabilidades: Mantém as classes originais focadas em seu propósito principal,
+		movendo comportamentos específicos para classes visitantes.
+	2) Facilidade para adicionar novos comportamentos: Novas funcionalidades podem ser adicionadas sem modificar as classes originais.
+
+Contras:
+	1) Manutenção mais complexa: Se houver muitas classes de elementos e visitantes, o código pode se tornar difícil de manter.
+	2) Dependência de conhecimento interno: O Visitor pode precisar acessar membros privados das classes, o que pode violar o princípio de encapsulamento.
+
+Quando usar?
+	1) Quando você precisa realizar operações em todos os elementos de uma estrutura complexa de objetos.
+	2) Quando quer evitar poluir as classes principais com comportamentos que não são centrais para elas.
+	3) Quando espera adicionar novos comportamentos frequentemente e quer evitar mexer nas classes originais.
+
+Exemplo simples
+	Imagine que você tem uma aplicação que lida com diferentes tipos de formas geométricas (como círculos e retângulos). 
+	Para exportar essas formas em XML, em vez de adicionar o código de exportação diretamente nas classes das formas, 
+	você cria um visitante que sabe como exportar cada tipo de forma.
+
+Conclusão: 
+	O padrão Visitor é útil para separar comportamentos específicos de uma estrutura complexa de objetos, 
+	facilitando a adição de novos comportamentos sem alterar o código original. No entanto, 
+	ele pode aumentar a complexidade do código e deve ser usado com cautela, especialmente em sistemas grandes.
