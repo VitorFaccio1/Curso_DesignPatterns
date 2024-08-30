@@ -1,0 +1,36 @@
+Padrão de Projeto Command
+	O padrão Command é um padrão de projeto comportamental que transforma um pedido em um objeto independente que 
+	contém todas as informações necessárias para realizar essa solicitação. Isso permite parametrizar métodos com diferentes pedidos, 
+	adiar ou enfileirar a execução de comandos, e facilitar a implementação de operações que podem ser desfeitas.
+
+Problema
+	Imagine que você está desenvolvendo um editor de texto com uma interface cheia de botões para diversas operações, como copiar, cortar e colar. 
+	Esses botões podem ser acionados de várias formas, como via barra de ferramentas, menus de contexto ou atalhos de teclado. 
+	A princípio, parece adequado colocar a lógica desses comandos diretamente nos botões, 
+	mas isso pode levar a uma proliferação de subclasses específicas para cada botão, além de causar duplicação de código e dificultar a manutenção.
+
+Solução
+	O padrão Command sugere separar a lógica dos comandos da interface gráfica (GUI). 
+	Em vez de os botões chamarem diretamente os métodos da lógica de negócio, eles acionam comandos que encapsulam esses métodos. 
+	Cada comando é um objeto que implementa uma interface comum, geralmente com um único método execute(). 
+	Isso desacopla o remetente (botões, menus, etc.) da execução real do pedido, facilitando a modificação e a reutilização de comandos.
+
+Estrutura
+	1) Command (Comando): Interface ou classe abstrata que define o método execute().
+	2) ConcreteCommand (Comando Concreto): Implementa o método execute() e armazena informações necessárias para executar a operação.
+	3) Invoker (Remetente): Responsável por acionar o comando.
+	4) Receiver (Destinatário): Contém a lógica do negócio que será executada pelo comando.
+	5) Client (Cliente): Configura os comandos e associa-os aos remetentes.
+
+Benefícios
+	1) Desacoplamento: Separa a interface gráfica da lógica de negócio.
+	2) Facilidade de Reversão: Permite implementar facilmente operações que podem ser desfeitas (Undo).
+	3) Flexibilidade: Facilita a adição de novos comandos sem modificar código existente.
+
+Analogia
+	Um exemplo do mundo real seria um pedido feito em um restaurante. O garçom anota o pedido em um papel (o comando) e o entrega na cozinha. 
+	O chef prepara a refeição sem precisar falar diretamente com o cliente, usando apenas as informações do pedido.
+
+Considerações
+	O padrão Command é ideal para aplicações que precisam implementar funcionalidades de desfazer/refazer,
+	ou que possuem uma interface complexa com várias ações desencadeadas por diferentes interações do usuário.
