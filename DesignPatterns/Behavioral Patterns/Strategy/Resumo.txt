@@ -1,0 +1,27 @@
+O que é?
+	O padrão Strategy é uma forma de organizar o código que permite que você escolha entre diferentes maneiras de realizar uma tarefa específica. 
+	Em vez de escrever várias versões de um algoritmo dentro de uma única classe, você separa cada versão em sua própria classe, chamadas de "estratégias". 
+	Isso facilita a troca de um algoritmo por outro sem precisar modificar o código principal da aplicação.
+
+Prós:
+	1) Flexibilidade: Você pode trocar facilmente a forma como uma tarefa é realizada durante a execução do programa.
+	2) Manutenção: O código fica mais fácil de entender e manter, pois cada algoritmo está separado em sua própria classe.
+	3) Extensibilidade: Novas estratégias podem ser adicionadas sem alterar o código existente.
+
+Contras:
+	1) Complexidade Inicial: Pode ser um pouco mais complicado de implementar inicialmente, pois você precisa criar várias classes e interfaces.
+	2) Conhecimento do Cliente: Quem usa o sistema precisa saber qual estratégia escolher para cada situação, o que pode aumentar a complexidade.
+
+Quando Usar:
+	1) Quando você tem várias maneiras de realizar a mesma tarefa e quer poder alternar entre elas facilmente.
+	2) Quando você deseja evitar grandes blocos de código com várias condições (como if/else ou switch), que podem dificultar a manutenção.
+
+Exemplo Simples: 
+	Imagine que você tem um aplicativo que calcula o preço final de um produto com diferentes tipos de descontos 
+	(como desconto por valor fixo, desconto percentual, ou sem desconto). Usando o Strategy, você criaria uma estratégia para cada tipo de desconto e 
+	escolheria qual aplicar com base na escolha do usuário.
+
+Conclusão: 
+	O padrão Strategy é útil quando você tem várias maneiras de realizar uma tarefa e quer manter seu código organizado, flexível e fácil de manter. 
+	Ele é ideal para situações onde o comportamento pode variar e precisa ser facilmente intercambiável. 
+	Apesar de exigir um pouco mais de planejamento, o ganho em clareza e manutenibilidade compensa.
