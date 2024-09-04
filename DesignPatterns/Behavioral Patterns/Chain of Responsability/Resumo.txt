@@ -1,0 +1,28 @@
+O que é?
+	O Chain of Responsibility, ou Corrente de Responsabilidade, é um padrão de projeto de software que permite que um pedido ou tarefa seja passado 
+	por uma cadeia de manipuladores, onde cada um pode decidir se processa o pedido ou passa para o próximo na cadeia.
+
+Prós:
+	1) Flexibilidade: Você pode adicionar, remover ou reorganizar os manipuladores (handlers) facilmente, sem mudar o código dos manipuladores.
+	2) Desacoplamento: Cada manipulador é independente dos outros, o que facilita a manutenção e a expansão do sistema.
+	3) Reutilização: Os mesmos manipuladores podem ser reutilizados em diferentes cadeias.
+
+Contras:
+	1) Depuração Complexa: Se houver muitos manipuladores na cadeia, pode ser difícil rastrear onde um pedido foi processado ou porque foi rejeitado.
+	2) Risco de Incompletude: Se nenhum manipulador na cadeia processar o pedido, ele pode não ser tratado adequadamente.
+
+Quando Usar?
+	1) Quando você tem várias operações que podem ser aplicadas a um pedido ou evento, mas não sabe de antemão qual operação será necessária.
+	2) Quando você deseja processar pedidos de maneira flexível e organizada, sem precisar sobrecarregar um único componente com muitas responsabilidades.
+
+Exemplo Simples: 
+	Imagine que você está lidando com um sistema de suporte ao cliente. Quando um cliente liga, a ligação passa por diferentes níveis de suporte:
+	Atendimento Automatizado: Tenta resolver problemas comuns automaticamente.
+	Atendente de Nível 1: Tenta resolver problemas básicos.
+	Especialista: Resolve problemas mais complexos que o atendente de nível 1 não conseguiu.
+	Cada nível é um manipulador na cadeia. Se um manipulador não puder resolver o problema, ele passa para o próximo na cadeia.
+
+Conclusão: 
+	O Chain of Responsibility é uma maneira eficaz de lidar com pedidos ou eventos que podem precisar de múltiplas etapas de processamento. 
+	Ele ajuda a manter o código organizado e flexível, permitindo que diferentes manipuladores cuidem de partes específicas de uma tarefa. 
+	No entanto, deve ser usado com cuidado para evitar complexidade excessiva e garantir que todos os pedidos sejam tratados corretamente.
