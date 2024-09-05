@@ -1,0 +1,26 @@
+O que é o Padrão Iterator?
+	O Iterator é um padrão de projeto comportamental que permite percorrer os elementos de uma coleção (como listas, pilhas ou árvores) 
+	sem expor como eles estão organizados internamente. Ou seja, você pode acessar todos os itens de uma coleção, um por um, sem precisar saber como ela funciona por dentro.
+
+Prós
+	1) Simplicidade: Facilita o acesso aos elementos de coleções complexas, sem se preocupar com a estrutura interna.
+	2) Flexibilidade: Permite usar diferentes formas de percorrer a mesma coleção, como acessar elementos sequencialmente ou de forma aleatória.
+	3) Desacoplamento: O código que usa o iterador não precisa conhecer os detalhes da coleção, tornando o sistema mais modular e fácil de manter.
+
+Contras
+	1) Sobrecarga: Para coleções simples, o uso do Iterator pode parecer excessivo e desnecessário, já que um simples loop já daria conta.
+	2) Complexidade: Criar vários tipos de iteradores pode aumentar a complexidade do sistema, especialmente em coleções muito grandes ou com algoritmos de iteração complexos.
+
+Quando Usar o Iterator?
+	1) A coleção que você está usando é complexa (como árvores ou grafos) e você deseja ocultar essa complexidade dos usuários.
+	2) Você quer ter múltiplas maneiras de percorrer uma coleção (como percorrer em profundidade ou amplitude).
+	3) Deseja que seu código seja capaz de trabalhar com diferentes tipos de coleções de forma genérica.
+
+Exemplo Simples
+	Imagine que você tenha uma coleção de livros armazenada em uma lista. Com o Iterator, você pode percorrer cada livro, um por um,
+	sem precisar saber como eles estão armazenados. O iterador cuida da lógica para você.
+
+Conclusão
+	O Iterator é uma maneira elegante de percorrer coleções sem se preocupar com sua estrutura interna. 
+	Ele torna o código mais limpo e desacoplado, mas pode ser desnecessário para coleções simples.
+	É especialmente útil em sistemas complexos onde o modo de acesso aos dados pode variar, proporcionando flexibilidade e modularidade.

@@ -1,6 +1,7 @@
 ﻿using DesignPatterns.Behavioral_Patterns.Chain_of_Responsability;
 using DesignPatterns.Behavioral_Patterns.Command;
 using DesignPatterns.Behavioral_Patterns.Interpreter.Calculator;
+using DesignPatterns.Behavioral_Patterns.Iterator;
 using DesignPatterns.Behavioral_Patterns.Observer;
 using DesignPatterns.Behavioral_Patterns.Strategy;
 using DesignPatterns.Behavioral_Patterns.Template_Method;
@@ -40,7 +41,8 @@ while (designPatternOption != 0)
         "\n13)Observer" +
         "\n14)Command" +
         "\n15)Strategy" +
-        "\n16)Chain of Responsability");
+        "\n16)Chain of Responsability" +
+        "\n17)Iterator");
 
     Console.Write("\nDigite a opção que deseja: ");
     designPatternOption = Convert.ToInt32(Console.ReadLine());
@@ -97,6 +99,9 @@ while (designPatternOption != 0)
             break;
         case 16:
             new ChainofResponsabilityClient().Menu();
+            break;
+        case 17:
+            new IteratorClient().Menu();
             break;
         default:
             break;
