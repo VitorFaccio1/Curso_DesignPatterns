@@ -1,7 +1,9 @@
 ﻿using DesignPatterns.Behavioral_Patterns.Command;
 using DesignPatterns.Behavioral_Patterns.Interpreter.Calculator;
 using DesignPatterns.Behavioral_Patterns.Iterator;
+using DesignPatterns.Behavioral_Patterns.Memento;
 using DesignPatterns.Behavioral_Patterns.Observer;
+using DesignPatterns.Behavioral_Patterns.State;
 using DesignPatterns.Behavioral_Patterns.Strategy;
 using DesignPatterns.Behavioral_Patterns.Template_Method;
 using DesignPatterns.Creational_Patterns.Abstract_Factory;
@@ -40,7 +42,9 @@ while (designPatternOption != 0)
         "\n13)Observer" +
         "\n14)Command" +
         "\n15)Strategy" +
-        "\n17)Iterator");
+        "\n17)Iterator" +
+        "\n18)Memento" +
+        "\n19)State");
 
     Console.Write("\nDigite a opção que deseja: ");
     designPatternOption = Convert.ToInt32(Console.ReadLine());
@@ -97,6 +101,12 @@ while (designPatternOption != 0)
             break;
         case 17:
             new IteratorClient().Menu();
+            break;
+        case 18:
+            new Video().Execute();
+            break;
+        case 19:
+            new StateClient().Execute();
             break;
         default:
             break;
