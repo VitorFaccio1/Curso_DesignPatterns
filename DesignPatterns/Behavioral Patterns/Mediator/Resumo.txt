@@ -1,0 +1,26 @@
+O Que é Mediator?
+	O Mediator é um padrão de projeto comportamental que simplifica as interações entre objetos, centralizando a comunicação em um único mediador. 
+	Em vez de objetos interagirem diretamente entre si, eles se comunicam através desse mediador, reduzindo dependências e facilitando a manutenção do código.
+
+Prós:
+	1) Responsabilidade Única: Centraliza a lógica de comunicação, tornando-a mais fácil de entender e manter.
+	2) Aberto/Fechado: Permite adicionar novos mediadores sem modificar os componentes existentes.
+	3) Redução de Acoplamento: Componentes dependem apenas do mediador, não entre si.
+	4) Reutilização: Facilita a reutilização de componentes em diferentes contextos.
+
+Contras:
+	1) Objeto Deus: O mediador pode se tornar muito complexo, concentrando muita responsabilidade.
+
+Quando Usar?
+	1) Quando classes têm muitas dependências entre si, tornando difícil a modificação de uma sem impactar outras.
+	2) Quando componentes são difíceis de reutilizar devido às suas dependências mútuas.
+	3) Quando há a necessidade de criar muitas subclasses apenas para reutilizar comportamentos específicos em contextos diferentes.
+
+Exemplo Simples
+	Imagine um formulário para editar perfis de usuários com vários campos e botões. Sem o Mediator, esses elementos podem ter interações complexas, 
+	como um campo de seleção que revela ou esconde outro campo. Com o Mediator, cada elemento notifica o mediador sobre eventos, e o mediador decide o que fazer. 
+	Por exemplo, um botão de envio notificaria o mediador, que então validaria os campos e tomaria a ação apropriada, simplificando a lógica dos elementos individuais.
+
+Conclusão
+	O Mediator é útil para gerenciar a complexidade de sistemas com muitos componentes interdependentes, centralizando a comunicação e reduzindo o acoplamento. 
+	Isso facilita a manutenção e a reutilização dos componentes, embora seja importante evitar que o mediador se torne muito complexo.

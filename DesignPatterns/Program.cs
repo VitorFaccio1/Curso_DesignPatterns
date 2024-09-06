@@ -1,6 +1,8 @@
-﻿using DesignPatterns.Behavioral_Patterns.Command;
+﻿using DesignPatterns.Behavioral_Patterns.Chain_of_Responsability;
+using DesignPatterns.Behavioral_Patterns.Command;
 using DesignPatterns.Behavioral_Patterns.Interpreter.Calculator;
 using DesignPatterns.Behavioral_Patterns.Iterator;
+using DesignPatterns.Behavioral_Patterns.Mediator;
 using DesignPatterns.Behavioral_Patterns.Memento;
 using DesignPatterns.Behavioral_Patterns.Observer;
 using DesignPatterns.Behavioral_Patterns.State;
@@ -42,9 +44,11 @@ while (designPatternOption != 0)
         "\n13)Observer" +
         "\n14)Command" +
         "\n15)Strategy" +
+        "\n16)Chain of Responsability" +
         "\n17)Iterator" +
-        "\n18)Memento" +
-        "\n19)State");
+        "\n18)Mediator" +
+        "\n19)Memento" +
+        "\n20)State");
 
     Console.Write("\nDigite a opção que deseja: ");
     designPatternOption = Convert.ToInt32(Console.ReadLine());
@@ -99,13 +103,19 @@ while (designPatternOption != 0)
         case 15:
             new StrategyClient().Menu();
             break;
+        case 16:
+            new ChainofResponsabilityClient().Menu();
+            break;
         case 17:
             new IteratorClient().Menu();
             break;
         case 18:
-            new Video().Execute();
+            new MediatorClient().Menu();
             break;
         case 19:
+            new Video().Execute();
+            break;
+        case 20:
             new StateClient().Execute();
             break;
         default:
